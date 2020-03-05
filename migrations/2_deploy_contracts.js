@@ -1,5 +1,5 @@
-const Hello = artifacts.require("./Hello.sol");
+const Earn = artifacts.require("./Earn.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Hello);
+  deployer.deploy(Earn);
 };

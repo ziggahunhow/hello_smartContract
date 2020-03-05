@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const web3 = new Web3(Web3.givenProvider);
-  const contractAddress = "0x3516c1cac3D2ca9fA27049C7556B7694B2538A1E";
+  const contractAddress = "0x3e3A1671299AC61d3980F6f5EC25fFb5457A66D6";
   const HelloContract = new web3.eth.Contract(HelloAbi, contractAddress);
   const [greeting, setGreeting] = useState(0);
 
