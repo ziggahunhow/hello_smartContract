@@ -1,29 +1,25 @@
-pragma solidity >=0.4.21 <0.7.0;
+pragma solidity ^0.5.0;
 
 // ----------------------------------------------------------------------------
 // ERC Token Standard #20 Interface
 //
 // ----------------------------------------------------------------------------
-abstract contract ERC20Interface {
-    function totalSupply() public view virtual returns (uint256);
+contract ERC20Interface {
+    function totalSupply() public view returns (uint256);
     function balanceOf(address tokenOwner)
         public
-        virtual
         view
         returns (uint256 balance);
     function allowance(address tokenOwner, address spender)
         public
-        virtual
         view
         returns (uint256 remaining);
-    function transfer(address to, uint256 tokens) public virtual returns (bool success);
+    function transfer(address to, uint256 tokens) public returns (bool success);
     function approve(address spender, uint256 tokens)
         public
-        virtual
         returns (bool success);
     function transferFrom(address from, address to, uint256 tokens)
         public
-        virtual
         returns (bool success);
 
     event Transfer(address indexed from, address indexed to, uint256 tokens);
@@ -81,13 +77,12 @@ contract NoobToken is ERC20Interface, SafeMath {
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
 
-    function totalSupply() public override view returns (uint256) {
+    function totalSupply() public view returns (uint256) {
         return _totalSupply - balances[address(0)];
     }
 
     function balanceOf(address tokenOwner)
         public
-        override
         view
         returns (uint256 balance)
     {
@@ -96,7 +91,6 @@ contract NoobToken is ERC20Interface, SafeMath {
 
     function allowance(address tokenOwner, address spender)
         public
-        override
         view
         returns (uint256 remaining)
     {
@@ -105,7 +99,6 @@ contract NoobToken is ERC20Interface, SafeMath {
 
     function approve(address spender, uint256 tokens)
         public
-        override
         returns (bool success)
     {
         allowed[msg.sender][spender] = tokens;
@@ -115,7 +108,6 @@ contract NoobToken is ERC20Interface, SafeMath {
 
     function transfer(address to, uint256 tokens)
         public
-        override
         returns (bool success)
     {
         balances[msg.sender] = safeSub(balances[msg.sender], tokens);
@@ -126,7 +118,6 @@ contract NoobToken is ERC20Interface, SafeMath {
 
     function transferFrom(address from, address to, uint256 tokens)
         public
-        override
         returns (bool success)
     {
         balances[from] = safeSub(balances[from], tokens);
