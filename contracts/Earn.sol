@@ -1,11 +1,11 @@
 pragma solidity >=0.4.21 <0.7.0;
 
 contract Earn {
-    address private administrator;
+    address private owner;
     mapping(address => uint256) public balances;
 
     constructor() public {
-        administrator = msg.sender;
+        owner = msg.sender;
     }
 
     function userDeposit(uint256 deposit) public {
