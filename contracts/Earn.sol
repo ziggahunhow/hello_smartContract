@@ -3,9 +3,17 @@ pragma solidity >=0.4.21 <0.7.0;
 contract Earn {
     address private owner;
     mapping(address => uint256) public balances;
+    address NoobToken;
+    address USDXToken;
 
-    constructor() public {
+    constructor(address _token, address _USDX) public {
+        NoobToken = _token;
+        USDXToken = _USDX;
         owner = msg.sender;
+    }
+
+    function returnAddr() public view returns (address token) {
+        return USDXToken;
     }
 
     function userDeposit(uint256 deposit) public {
