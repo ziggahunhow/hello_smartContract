@@ -55,6 +55,11 @@ module.exports = {
       network_id: 4,
       gas: 4500000,
       gasPrice: 10000000000
+    },
+    ganache: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "999"
     }
   },
   // networks: {
