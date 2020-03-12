@@ -1,0 +1,54 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "_cEtherContract",
+        "type": "address"
+      }
+    ],
+    "name": "supplyEthToCompound",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_erc20Contract",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_cErc20Contract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_numTokensToSupply",
+        "type": "uint256"
+      }
+    ],
+    "name": "supplyErc20ToCompound",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

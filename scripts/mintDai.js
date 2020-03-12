@@ -1,7 +1,7 @@
 require("dotenv").config();
 const Web3 = require("web3");
 
-const daiAbi = require("./build/contracts/Dai.json");
+const daiAbi = require("../abi/Dai.json");
 const daiMainNetAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
 const daiMcdJoin = "0x9759A6Ac90977b93B58547b4A71c78317f391A28";
 let daiContract;

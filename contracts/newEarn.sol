@@ -10,10 +10,10 @@ contract CErc20 {
 }
 
 contract NewEarn {
-    function sendTouch(uint256 erc20Amount) public returns (bool) {
-        // calculations of TOUCH need to be updated
-        return true;
-    }
+    // function sendTouch(uint256 erc20Amount) public returns (uint256) {
+    //     // calculations of TOUCH need to be updated
+    //     return erc20Amount;
+    // }
     function supplyErc20ToCompound(
         address _erc20Contract,
         address _cErc20Contract,
@@ -30,7 +30,7 @@ contract NewEarn {
 
         // Mint cTokens and return the result
         uint256 mintResult = cToken.mint(_numTokensToSupply);
-        sendTouch(_numTokensToSupply);
+        // sendTouch(_numTokensToSupply);
         return mintResult;
     }
 }
