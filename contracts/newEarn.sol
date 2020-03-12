@@ -10,9 +10,9 @@ contract CErc20 {
 }
 
 contract NewEarn {
-    function sendTouch(uint256 erc20Amount) public returns (uint256) {
-        uint256 _touch;
-        return _touch;
+    function sendTouch(uint256 erc20Amount) public returns (bool) {
+        // calculations of TOUCH need to be updated
+        return true;
     }
     function supplyErc20ToCompound(
         address _erc20Contract,
